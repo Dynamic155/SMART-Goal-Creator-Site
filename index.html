@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SMART Goals Creator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="tokyonight.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <nav class="container-fluid">
+        <ul>
+            <li><strong>SMART Goals Creator</strong></li>
+        </ul>
+        <ul>
+            <li><a href="#specific">Specific</a></li>
+            <li><a href="#measurable">Measurable</a></li>
+            <li><a href="#achievable">Achievable</a></li>
+            <li><a href="#relevant">Relevant</a></li>
+            <li><a href="#time-bound">Time-bound</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section>
+            <hgroup>
+                <h2>Create Your SMART Goal</h2>
+                <h3>Follow the steps to create a specific, measurable, achievable, relevant, and time-bound goal</h3>
+            </hgroup>
+
+            <div class="goal-section">
+                <label for="goal">Your Goal:</label>
+                <input type="text" id="goal" placeholder="Enter your goal" required>
+                <button onclick="lockGoal()">Select Goal</button>
+            </div>
+
+            <div id="smart-steps" style="display:none;">
+                <div class="goal-section" id="specific">
+                    <label for="specific-input">Specific:</label>
+                    <input type="text" id="specific-input" placeholder="How is your goal specific?" required>
+                    <div class="tips">Tips: Define the who, what, where, why, and which aspects of your goal.</div>
+                </div>
+
+                <div class="goal-section" id="measurable">
+                    <label for="measurable-input">Measurable:</label>
+                    <input type="text" id="measurable-input" placeholder="How will you measure progress?" required>
+                    <div class="tips">Tips: Quantify your goal with metrics or milestones.</div>
+                </div>
+
+                <div class="goal-section" id="achievable">
+                    <label for="achievable-input">Achievable:</label>
+                    <input type="text" id="achievable-input" placeholder="Is your goal achievable?" required>
+                    <div class="tips">Tips: Ensure your goal is realistic and attainable.</div>
+                </div>
+
+                <div class="goal-section" id="relevant">
+                    <label for="relevant-input">Relevant:</label>
+                    <input type="text" id="relevant-input" placeholder="How is your goal relevant?" required>
+                    <div class="tips">Tips: Align your goal with your broader objectives and aspirations.</div>
+                </div>
+
+                <div class="goal-section" id="time-bound">
+                    <label for="time-bound-input">Time-bound:</label>
+                    <input type="text" id="time-bound-input" placeholder="What is the timeframe?" required>
+                    <div class="tips">Tips: Set a clear deadline for your goal.</div>
+                </div>
+
+                <button onclick="formatGoal()">Format Goal</button>
+
+                <div id="formatted-goal" class="goal-section" style="display:none;">
+                    <label>Formatted SMART Goal:</label>
+                    <p id="goal-output"></p>
+                    <button onclick="copyGoal()">Copy Goal</button>
+                    <button onclick="saveGoal()">Save Goal</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container">
+        <small>
+            <a href="#">Don't Contact Us</a>
+        </small>
+    </footer>
+</body>
+
+</html>

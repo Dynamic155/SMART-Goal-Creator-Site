@@ -1,0 +1,41 @@
+body {
+    background-color: #282828;
+    color: #ebdbb2;
+    padding: 20px;
+}
+
+nav, footer, .container, input, button {
+    background-color: var(--base);
+    color: #ebdbb2;
+}
+
+nav a, footer a, button, input {
+    color: #ebdbb2;
+}
+
+button {
+    background-color: #3c3836;
+    border-color: #3c3836;
+}
+
+button:hover {
+    background-color: #2d2b29;
+}
+
+input {
+    border-color: #3c3836;
+}
+
+.tips {
+    color: #a89984;
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+
+.goal-section {
+    margin-bottom: 20px;
+}
+
+.goal-section label {
+    font-weight: bold;
+}
